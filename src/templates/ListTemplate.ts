@@ -9,8 +9,12 @@ interface DOMList {
 export default class ListTemplate implements DOMList {
 
   ul: HTMLUListElement
-  
+
   private constructor() {
     this.ul = document.getElementById("listItems") as HTMLUListElement
+  }
+
+  clear(): void {
+    this.ul.innerHTML = ''
   }
 }
