@@ -22,4 +22,9 @@ export default class FullList implements List {
   save(): void {
     localStorage.setItem("myList", JSON.stringify(this._list))
   }
+
+  clearList(): void {
+    this._list = []
+    this.save()
+  }
 }
