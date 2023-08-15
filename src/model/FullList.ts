@@ -18,4 +18,8 @@ export default class FullList implements List {
   get list(): ListItem[] {
     return this._list
   }
+
+  save(): void {
+    localStorage.setItem("myList", JSON.stringify(this._list))
+  }
 }
