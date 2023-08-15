@@ -11,4 +11,11 @@ interface List {
 
 export default class FullList implements List {
 
+  static instance: FullList = new FullList()
+
+  private constructor(private _list: ListItem[] = []){}
+
+  get list(): ListItem[] {
+    return this._list
+  }
 }
